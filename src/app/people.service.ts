@@ -13,9 +13,19 @@ export class PeopleService {
     new Person(3,'Sean','Doyle',new Date('01/01/1955'))
   ];
 
-  getPeople(): Observable<Person[]>{
-    return of(this.people);
+  getPeople(person?: Person): Observable<Person[]>{
+    if(person){
+      let results: Person[] = [];
+      for(let p of this.people){
+        if(p.firstName.toLowerCase()==person.firstName.toLowerCase()){
+          results.push(p);
+        }
+      }
+      return of(results);
+    }
+    else
+      return of(this.people)
   }
-
+  
   constructor() { }
 }

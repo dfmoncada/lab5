@@ -11,7 +11,8 @@ import { GuestlistComponent } from './guestlist/guestlist.component';
     GuestlistComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

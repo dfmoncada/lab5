@@ -3,3 +3,6 @@
     <li *ngFor="let person of guests">{{person.firstName}} {{person.lastName}}:{{person.getAge()}}</li>
   </ul>
 </div>
+
+<input [(ngModel)] = "guestSearch.firstName"><button (click)="findPeople(guestSearch)">Search</button>
+<div>{{guestSearch.firstName}}</div>
