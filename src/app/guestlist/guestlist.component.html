@@ -1,0 +1,5 @@
+<div *ngIf="guests">
+  <ul>
+    <li *ngFor="let person of guests">{{person.firstName}} {{person.lastName}}:{{person.getAge()}}</li>
+  </ul>
+</div>
